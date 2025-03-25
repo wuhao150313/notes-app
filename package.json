@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "unocss": "^66.1.0-beta.6"
   }
 }
