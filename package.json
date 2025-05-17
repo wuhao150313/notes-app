@@ -3,6 +3,8 @@
     "nodemon": "^3.1.9"
   },
   "dependencies": {
+    "@ant-design/charts": "^2.2.7",
+    "recharts": "^2.15.3",
     "unocss": "^66.1.0-beta.6"
   }
 }

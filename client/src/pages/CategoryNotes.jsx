@@ -3,7 +3,7 @@ import { List, Card, Tag } from 'antd';
 import { getNotesByCategory } from '@/api/noteApi';
 import { useStore } from '@/store/userStore';
 import { useNavigate, useParams } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
+import Navbar1 from '@/components/Navbar1';
 
 const CategoryNotes = () => {
   const { user } = useStore();
@@ -35,7 +35,7 @@ const CategoryNotes = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar1 />
       <h1>分类笔记列表</h1>
       <List
         grid={{ gutter: 16, column: 4 }}

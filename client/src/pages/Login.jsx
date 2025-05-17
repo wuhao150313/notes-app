@@ -69,7 +69,7 @@
 
 // export default Login;
 
-import { Form, Input, Button, Typography } from 'antd';
+import { Form, Input, Button, Typography, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { loginUser } from '@/api/userApi';
 import { useStore } from '@/store/userStore';
@@ -85,8 +85,8 @@ const Login = () => {
     try {
       const response = await loginUser(values);
       setUser(response.data); // 设置用户信息
-      alert('登录成功!');
-      navigate('/'); // 跳转到主页
+      message.success('登录成功!');
+      navigate('/home'); // 跳转到主页
     } catch (error) {
       console.error('Login failed:', error);
       alert('用户名或密码错误');
@@ -100,7 +100,7 @@ const Login = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#bfdbfe', // 等于 bg-blue-200
+        backgroundColor: '#d4c5b3', // 等于 bg-blue-200
       }}
     >
       <div
@@ -123,7 +123,7 @@ const Login = () => {
         <Form name="login_form" onFinish={onSubmit}>
           <Form.Item
             name="username"
-            initialValue="hajimi"
+            initialValue="键入用户名"
             rules={[{ required: true, message: '请输入用户名！' }]}
           >
             <Input
@@ -140,7 +140,7 @@ const Login = () => {
 
           <Form.Item
             name="password"
-            initialValue="wu13770728573"
+            initialValue="键入密码"
             rules={[{ required: true, message: '请输入密码！' }]}
           >
             <Input.Password

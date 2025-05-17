@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #408fae;
+  background-color: var(--nav-bg);
   padding: 0.5rem 1rem;
 }
 
@@ -15,19 +15,36 @@
 }
 
 .nav-menu li a {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
 }
 
 .nav-menu li.active a {
-  color: #408fae;
-  background-color: #fff;
+  color: var(--text-primary);
+  background-color: var(--nav-active-bg);
 }
 
 .login-link {
-  color: #799ecf;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.nickname {
+  margin-left: 8px;
+  color: var(--text-primary);
+}
+
+.theme-switch {
+  margin-right: 8px;
 }

@@ -29,3 +29,8 @@ export const updateNote = async (noteId, noteData) => {
 export const deleteNote = async (noteId) => {
   return axiosInstance.delete(`/notes/${noteId}`);
 };
+
+// 获取随机笔记
+export const getRandomNotes = async (userId) => {
+  return axiosInstance.get(`/notes/random/${userId}`);
+};

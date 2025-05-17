@@ -88,3 +88,17 @@ export const deleteNote = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// 获取随机笔记
+export const getRandomNotes = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const [rows] = await pool.query(
+      "SELECT * FROM notes WHERE user_id = ? ORDER BY RAND() LIMIT 3",
+      [userId]
+    );
+    res.status(200).json(rows);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

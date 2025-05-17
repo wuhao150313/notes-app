@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Layout, Menu, Typography, Avatar, Space, Button } from 'antd';
+import { Layout, Menu, Typography, Avatar, Space, Button, Modal } from 'antd';
 import {
   UserOutlined,
   HomeOutlined,
@@ -17,6 +17,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation(); // 获取当前路由路径
 
+  //用个Modal
   const handleLogout = () => {
     if (window.confirm('确定退出？')) {
       logout();

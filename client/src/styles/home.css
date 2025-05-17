@@ -1,0 +1,132 @@
+/* ====== Carousel 外部结构 ====== */
+.carousel-wrapper {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto 2rem auto;
+}
+
+.carousel-container {
+  overflow: visible;
+}
+
+/* ====== 外部箭头样式 ====== */
+.external-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.external-arrow.left {
+  left: -60px;
+}
+
+.external-arrow.right {
+  right: -60px;
+}
+
+.external-arrow:hover {
+  background-color: var(--bg-hover);
+}
+
+/* ====== 轮播内容卡片 ====== */
+.carousel-slide {
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  min-height: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-title {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.carousel-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.carousel-link {
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.carousel-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* ====== 最新笔记卡片样式（固定高度）====== */
+.latest-note-card {
+  height: 200px;
+  transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.latest-note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  border-color: var(--border-hover-color);
+}
+
+.note-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.note-content .ant-typography {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-tags {
+  margin-top: 8px;
+}
+
+.note-tags .ant-tag {
+  margin: 4px;
+  padding: 2px 8px;
+}
+
+.note-card-title {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.note-card-description {
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}

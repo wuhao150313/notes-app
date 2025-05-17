@@ -4,6 +4,7 @@ import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import noteRoutes from "./routes/noteRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
+import statisticsRoutes from "./routes/statisticsRoutes.js";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ app.use(
   cors({
     origin: (origin, callback) => {
       if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
+      if (!allowedOrigins.includes(origin)) {
         const msg =
           "这个网站的跨域资源共享 (CORS) 策略不允许从指定的来源进行访问。";
         return callback(new Error(msg), false);
@@ -31,5 +32,6 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/notes", noteRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/statistics", statisticsRoutes);
 
 export default app;

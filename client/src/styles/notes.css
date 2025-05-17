@@ -1,0 +1,75 @@
+.notes-container {
+  padding: 1rem;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.notes-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notes-list {
+  padding: 1rem;
+}
+
+.note-card {
+  background-color: var(--bg-note-card);
+  margin: 0.5rem;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-note-card);
+}
+
+.note-card-content {
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0.75rem;
+  padding-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--theme-text-primary);
+}
+
+.note-card-description {
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0.5rem;
+  color: var(--theme-text-secondary);
+}
+
+.note-card-tags {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  min-height: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.note-card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  margin-top: auto;
+}
